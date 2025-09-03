@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio - Juan Pablo Jiménez Jaime</title>
+
+    <meta
+      name="description"
+      content="Portafolio de Juan Pablo, Ingeniero en Desarrollo y Gestión de Software con 2 años de experiencia."
+    />
+
+    <!--Open Graph-->
+
+    <meta property="og:title" content="Portafolio - Juan Pablo Jiménez Jaime" />
+    <meta
+      property="og:description"
+      content="Portafolio de Juan Pablo, Ingeniero en Desarrollo y Gestión de Software con 2 años de experiencia."
+    />
+
+    <!--Imagen-->
+    <meta property="og:image" content="" />
+    <meta property="og:image:alt" content="Portafolio" />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#09f" />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <script
+      src="https://kit.fontawesome.com/b696b04146.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header id="header">
+      <h1>Mi portafolio</h1>
+
+      <nav style="display: flex; gap: 12px; align-items: center">
+        <a
+          href="https://linkedin.com/in/juan-pablo-jiménez-jaime-584a5817b"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i class="fa-brands fa-linkedin"></i
+        ></a>
+
+        <a
+          href="https://github.com/Papatoncio"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i class="fa-brands fa-github"></i
+        ></a>
+
+        <button id="toggle-theme" style="padding: 0">
+          <i
+            id="moon"
+            class="fa-solid fa-moon"
+            style="grid-area: 1 / 1 / 2 / 2; color: #fff"
+          ></i>
+          <i
+            id="sun"
+            class="fa-solid fa-sun"
+            style="grid-area: 1 / 1 / 2 / 2; color: #fff"
+          ></i>
+        </button>
+      </nav>
+    </header>
+
+    <main id="main">
+      <h2>Sobre Mí</h2>
+      <section>
+        <article style="grid-column: 1 / -1">
+          <p>
+            Soy Juan Pablo Jiménez Jaime,
+            <strong>Ingeniero en Desarrollo y Gestión de Software</strong> con
+            mas de 2 años de experiencia <strong>fullstack</strong> gestionando
+            sistemas de software. Ofreciendo soluciones robustas, permitiendo la
+            mejora de procesos, automatización y buenas prácticas del desarrollo
+            ágil.
+          </p>
+          <footer>
+            <small
+              >Algunos de mis hobbies son jugar videojuegos y escuchar
+              podcast.</small
+            >
+          </footer>
+        </article>
+      </section>
+
+      <h2>Experiencia Profesional</h2>
+
+      <section class="timeline">
+        <i class="timeline-flow"></i>
+
+        <!--LKS BAAS S.A. de C.V.-->
+        <i class="timeline-dot" style="grid-column: 2 / 3"></i>
+        <i class="timeline-connection" style="grid-column: 2 / 3"></i>
+
+        <article class="timeline-item" style="grid-row: 1 / 2">
+          <header>
+            <h3>LKS BAAS S.A. de C.V.</h3>
+          </header>
+          <i class="separator"></i>
+          <p><em>Puesto:</em> Desarrollador</p>
+          <i class="separator"></i>
+          <footer>
+            <p><em>Periodo:</em> Mayo 2023 - Actualidad</p>
+          </footer>
+        </article>
+      </section>
+
+      <h2>Proyectos</h2>
+      <section>
+        <article>
+          <header><h3>titulo</h3></header>
+          <iframe
+            src="https://es.wikipedia.org/wiki/Diario"
+            title="YouTube"
+          ></iframe>
+          <p><em>Nombre:</em></p>
+          <p><em>Descripción:</em></p>
+          <p><em>Tecnologías:</em></p>
+          <footer>
+            <small>adicional.</small>
+          </footer>
+        </article>
+      </section>
+
+      <h2>Habilidades Técnicas</h2>
+      <section>
+        <article>
+          <header><h3>Lenguajes</h3></header>
+          <ul class="ul-2col">
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>Python</li>
+            <li>C#</li>
+            <li>SQL</li>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+        </article>
+
+        <article>
+          <header><h3>Frameworks y tecnologías</h3></header>
+          <ul class="ul-2col">
+            <li>Angular</li>
+            <li>Spring Boot</li>
+            <li>Flask</li>
+            <li>Docker</li>
+            <li>Git</li>
+            <li>GitHub</li>
+          </ul>
+        </article>
+
+        <article>
+          <header><h3>Bases de datos</h3></header>
+          <ul class="ul-2col">
+            <li>PostgreSQL</li>
+            <li>SQL Server</li>
+            <li>MongoDB</li>
+          </ul>
+        </article>
+
+        <article>
+          <header><h3>Metodologías</h3></header>
+          <ul class="ul-2col">
+            <li>Scrum</li>
+          </ul>
+        </article>
+
+        <article>
+          <header><h3>Otros</h3></header>
+          <ul class="ul-2col">
+            <li>Pruebas SAST</li>
+            <li>Pruebas DAST</li>
+            <li>Pruebas Unitarias</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <footer id="footer">
+      Contactame:
+      <a href="mailto:juanpij23@hotmail.com"> Envíame un correo. </a>
+    </footer>
+
+    <script>
+      const toggleBtn = document.getElementById("toggle-theme");
+
+      toggleBtn.addEventListener("click", () => {
+        const currentTheme =
+          document.documentElement.getAttribute("data-theme");
+        if (currentTheme === "dark") {
+          document.documentElement.removeAttribute("data-theme");
+          localStorage.setItem("theme", "light");
+          document.getElementById("moon").style.display = "block";
+          document.getElementById("sun").style.display = "none";
+        } else {
+          document.documentElement.setAttribute("data-theme", "dark");
+          localStorage.setItem("theme", "dark");
+          document.getElementById("moon").style.display = "none";
+          document.getElementById("sun").style.display = "block";
+        }
+      });
+
+      // Opcional: carga tema desde localStorage
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+        document.getElementById("moon").style.display = "none";
+        document.getElementById("sun").style.display = "block";
+      } else {
+        document.getElementById("moon").style.display = "block";
+        document.getElementById("sun").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
