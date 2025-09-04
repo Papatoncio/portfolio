@@ -11,6 +11,7 @@
   --text-accent: #0078d4; /* Azul Microsoft como acento */
   --separator-outline: 1px solid rgba(0, 0, 0, 0.833);
   --bg-dot: #0078d4;
+  --bg-icon: #0a2239;
 }
 
 /* 🌑 Tema oscuro */
@@ -31,6 +32,7 @@
   --text-accent: #00bcd4; /* Azul celeste como acento */
   --separator-outline: 1px solid rgba(255, 255, 255, 0.833);
   --bg-dot: #79b8ff;
+  --bg-icon: #79b8ff;
 }
 
 * {
@@ -135,6 +137,12 @@ h1 {
   font-size: x-large;
   text-decoration: none;
   color: #ffffff;
+}
+
+#main a {
+  font-size: large;
+  text-decoration: none;
+  color: var(--bg-icon);
 }
 
 iframe {
