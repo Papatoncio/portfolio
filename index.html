@@ -72,7 +72,7 @@
     <main id="main">
       <h2>Sobre Mí</h2>
       <section>
-        <article style="grid-column: 1 / -1">
+        <article style="grid-column: 1 / -1; text-align: left">
           <p>
             Soy Juan Pablo Jiménez Jaime,
             <strong>Ingeniero en Desarrollo y Gestión de Software</strong> con
@@ -89,28 +89,164 @@
       </section>
 
       <h2>Proyectos</h2>
+      <!-- Proyectos Personales -->
       <section>
         <article>
           <header>
-            <h3>
-              SecurePass
-              <span>
-                <a
-                  href="https://github.com/Papatoncio/securepass"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-              </span>
-            </h3>
+            <h3 style="margin: 0">SecurePass</h3>
+            <h3 style="margin: 0">|</h3>
+            <a
+              href="https://papatoncio.github.io/securepass/"
+              target="_blank"
+              rel="noreferrer"
+              tooltip="Vista Previa"
+            >
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a
+              href="https://github.com/Papatoncio/securepass"
+              target="_blank"
+              rel="noreferrer"
+              tooltip="Repositorio"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
           </header>
-          <iframe
-            src="https://papatoncio.github.io/securepass/"
-            title="SecurePass"
-          ></iframe>
-          <p><em>Generador de contraseñas.</em></p>
-          <p><em>Tecnologías: HTML, CSS, JS</em></p>
+          <p>
+            <em
+              >Generador de contraseñas seguras con parámetros personalizables
+              como mayúsculas, minúsculas, números, carácteres especiales y
+              número de caracteres.</em
+            >
+          </p>
+          <footer style="width: 100%">
+            <ul
+              class="tecnologies-container"
+              style="text-decoration: none; list-style: none"
+            >
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JS</li>
+            </ul>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <h3 style="margin: 0">CapiStock</h3>
+            <h3 style="margin: 0">|</h3>
+            <a
+              href="https://github.com/Papatoncio/CapiStock"
+              target="_blank"
+              rel="noreferrer"
+              tooltip="Repositorio"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </header>
+          <p>
+            <em
+              >Aplicación móvil pada administración de inventario, permite
+              guardar productos con nombre, stock, categoría y una imagen
+              referente al producto.</em
+            >
+          </p>
+          <footer style="width: 100%">
+            <ul
+              class="tecnologies-container"
+              style="text-decoration: none; list-style: none"
+            >
+              <li>Flutter</li>
+              <li>NodeJS</li>
+              <li>PostgreSQL</li>
+            </ul>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <h3 style="margin: 0">Calma Mente</h3>
+            <h3 style="margin: 0">|</h3>
+            <a
+              href="https://github.com/Papatoncio/calmamente-api"
+              target="_blank"
+              rel="noreferrer"
+              tooltip="Repositorio"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </header>
+          <p>
+            <em
+              >Aplicación web para entrenar y probar algoritmos de Machine
+              Learning no supervisados como K-Means y GMM (Gaussian Mixture
+              Model), permite subir sets de datos para entrenar modelos con
+              parámetros especificados, descargar y subir modelos entrenados,
+              exportar resultados del entrenamiento y realizar predicciones.
+            </em>
+          </p>
+          <footer style="width: 100%">
+            <ul
+              class="tecnologies-container"
+              style="text-decoration: none; list-style: none"
+            >
+              <li>Angular</li>
+              <li>Flask</li>
+              <li>PostgreSQL</li>
+            </ul>
+          </footer>
+        </article>
+
+        <!-- Proyectos Empresariales -->
+        <article>
+          <header>
+            <h3 style="margin: 0">Visor SPEI</h3>
+          </header>
+          <p>
+            <em
+              >Aplicación web para administrar información de entidades
+              financieras, permite administrar cuentahabientes, enviar y recibir
+              órdenes de pago, administrar certificados y generar reportes con
+              la información de las operaciones.</em
+            >
+          </p>
+          <footer style="width: 100%">
+            <ul
+              class="tecnologies-container"
+              style="text-decoration: none; list-style: none"
+            >
+              <li>Angular</li>
+              <li>Spring Boot</li>
+              <li>PostgreSQL</li>
+              <li>RabbitMQ</li>
+            </ul>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <h3 style="margin: 0">Aplicativo SPEI</h3>
+          </header>
+          <p>
+            <em
+              >Aplicación de escritorio que permite a las instituciones
+              financieras trabajar con SPEI (Sistema de Pagos Electrónicos
+              Interbancarios) del Banco de México en distintos escenarios,
+              permite enviar y recibir órdenes de pago de manera segura
+              implementando comunicación cifrada y servicios de mensajería.
+            </em>
+          </p>
+          <footer style="width: 100%">
+            <ul
+              class="tecnologies-container"
+              style="text-decoration: none; list-style: none"
+            >
+              <li>Java Swing</li>
+              <li>Spring Boot</li>
+              <li>PostgreSQL</li>
+              <li>RabbitMQ</li>
+            </ul>
+          </footer>
         </article>
       </section>
 
@@ -163,10 +299,23 @@
           </ul>
         </article>
       </section>
+
+      <div
+        style="
+          margin: 16px 0px 16px 0px;
+          justify-items: center;
+          text-align: center;
+        "
+      >
+        <h2>Contactame</h2>
+        <a href="mailto:juanpij23@hotmail.com">
+          <button class="mail-button" type="button">Envíame un correo</button>
+        </a>
+      </div>
     </main>
 
     <footer id="footer">
-      <a href="mailto:juanpij23@hotmail.com"> Envíame un correo. </a>
+      <h4 style="padding: 0; margin: 0">Hecho por: Juan Pablo Jiménez Jaime</h4>
     </footer>
 
     <script>
