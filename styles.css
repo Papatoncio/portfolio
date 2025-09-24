@@ -15,6 +15,8 @@
   --bg-icon: #0a2239;
   --bg-tooltip: #1e2a38;
   --text-tooltip: #ffffff;
+  --text-title: rgb(0, 0, 0);
+  --bg-title: rgb(167, 167, 167);
 }
 
 /* 🌑 Tema oscuro */
@@ -34,10 +36,16 @@
   --bg-icon: #79b8ff;
   --bg-tooltip: #ffffff;
   --text-tooltip: #0a2239;
+  --text-title: rgb(226, 225, 225);
+  --bg-title: rgb(107, 107, 107);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
-  transition-duration: 600ms;
+  transition-duration: 0.2s;
 }
 
 body {
@@ -51,8 +59,9 @@ body {
     "main"
     "footer";
 
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Inter Tight", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 #header {
@@ -79,7 +88,7 @@ body {
 
   display: flex;
   flex-direction: column;
-  padding: 24px 15% 32px 15%;
+  padding: 24px clamp(16px, 10%, 15%) 32px clamp(16px, 10%, 15%);
   background-color: var(--bg-main);
 }
 
@@ -117,7 +126,7 @@ article {
 }
 
 article:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.01);
   box-shadow: var(--card-shadow-hover);
 }
 
@@ -173,9 +182,21 @@ iframe {
   width: 100%;
   height: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   justify-content: space-between;
   justify-items: center;
+  gap: 16px;
+}
+
+.ul-2col li {
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  background-color: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  outline: var(--separator-outline);
+  border-radius: 10px 0px 10px 0px;
+  padding: 8px;
 }
 
 #toggle-theme {
@@ -184,6 +205,7 @@ iframe {
   background-color: transparent;
   border: none;
   font-size: x-large;
+  cursor: pointer;
 }
 
 .tecnologies-container {
@@ -225,17 +247,66 @@ iframe {
   text-decoration: none;
   background-color: var(--bg-main);
   color: var(--text-body);
+  font-weight: 600;
   box-sizing: border-box;
   box-shadow: var(--card-shadow);
   padding: 6px 16px 6px 16px;
   border-radius: 5px;
   transition: 0.3s linear;
+  position: relative;
+  cursor: pointer;
+  z-index: 2;
 }
 
 .mail-button:hover {
   cursor: pointer;
-  background-color: var(--text-body);
+  box-shadow: 0 0 5px var(--text-body), 0 0 30px var(--text-body);
   color: var(--bg-main);
+}
+
+.mail-button::after {
+  border-radius: 3px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--text-body);
+  clip-path: circle(0% at 50% 50%);
+  transition: 0.65s;
+  z-index: -1;
+}
+
+.mail-button:hover::after {
+  clip-path: circle(100% at 50% 50%);
+}
+
+.title {
+  width: auto;
+  height: auto;
+  padding: 12px;
+  position: relative;
+}
+
+.title h1 {
+  margin: 0;
+  color: var(--text-title);
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-title);
+  clip-path: rect(10% 0% 90% 0%);
+  transition: 0.65s;
+  z-index: -1;
+  box-sizing: border-box;
+  animation: title-bg 0.5s both linear 0.25s;
 }
 
 @media (width < 450px) {
@@ -247,7 +318,13 @@ iframe {
 @keyframes compress-header {
   to {
     background-color: var(--bg-header-compress);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px);
+  }
+}
+
+@keyframes title-bg {
+  to {
+    clip-path: rect(10% 100% 90% 0% round 5px);
   }
 }
 
