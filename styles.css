@@ -197,6 +197,7 @@ iframe {
   outline: var(--separator-outline);
   border-radius: 10px 0px 10px 0px;
   padding: 8px;
+  align-content: center;
 }
 
 .ul-2col li:hover {
