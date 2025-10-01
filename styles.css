@@ -199,6 +199,11 @@ iframe {
   padding: 8px;
 }
 
+.ul-2col li:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: var(--card-shadow-hover);
+}
+
 #toggle-theme {
   display: grid;
   grid-template: 1fr / 1fr;
@@ -321,7 +326,6 @@ iframe {
 
 @keyframes title-bg {
   to {
-    background: --bg-t;
     clip-path: rect(10% 100% 90% 0% round 5px);
   }
 }
