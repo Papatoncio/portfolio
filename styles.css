@@ -311,6 +311,11 @@ iframe {
   animation: title-bg 0.5s both linear 0.25s;
 }
 
+.icon {
+  width: 15px;
+  height: 15px;
+}
+
 @media (width < 450px) {
   section {
     grid-template-columns: 1fr;
